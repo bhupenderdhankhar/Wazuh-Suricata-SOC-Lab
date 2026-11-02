@@ -1,0 +1,48 @@
+# SOC Lab Testing and Validation
+
+## Test Case 1: SSH Brute-Force Detection
+
+Objective: Validate repeated SSH authentication failure detection.
+
+Expected result:
+- Authentication events collected.
+- Wazuh rule 5763 triggered when its conditions are met.
+- Security alert visible in dashboard.
+
+## Test Case 2: Active Response
+
+Objective: Validate automated firewall response.
+
+Expected result:
+- Matching alert triggers Active Response.
+- firewall-drop executes.
+- Source IP is blocked for the configured timeout.
+
+## Test Case 3: File Integrity Monitoring
+
+Objective: Validate file change detection.
+
+Test activities:
+- Create a test file.
+- Modify the file.
+- Delete the file.
+
+Expected result:
+- Corresponding FIM events appear in Wazuh.
+
+## Test Case 4: Suricata Event Collection
+
+Objective: Validate network event ingestion.
+
+Expected result:
+- Suricata generates EVE JSON events.
+- Wazuh agent collects the events.
+- Events become available for investigation.
+
+## Test Case 5: Vulnerability Detection
+
+Objective: Validate endpoint vulnerability monitoring.
+
+Expected result:
+- Endpoint inventory is collected.
+- Vulnerability findings are displayed in Wazuh.
