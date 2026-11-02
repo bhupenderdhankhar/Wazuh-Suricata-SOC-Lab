@@ -1,0 +1,52 @@
+# Suricata IDS Configuration
+
+## Overview
+
+Suricata IDS was deployed on the Ubuntu monitoring sensor to inspect network traffic and generate security events.
+
+## Log Configuration
+
+Suricata generates security events in EVE JSON format.
+
+**Log file:**
+
+`/var/log/suricata/eve.json`
+
+## Wazuh Integration
+
+The Wazuh agent was configured to monitor Suricata's EVE JSON log.
+
+Example configuration:
+
+```xml
+<localfile>
+  <log_format>json</log_format>
+  <location>/var/log/suricata/eve.json</location>
+</localfile>
+```
+
+## Event Monitoring Workflow
+
+1. Suricata inspects network traffic.
+2. Security events are written to EVE JSON.
+3. Wazuh agent collects the log events.
+4. Wazuh manager processes the collected events.
+5. Security events are displayed in the Wazuh dashboard.
+
+## Verification
+
+Check whether Suricata is generating events:
+
+```bash
+sudo tail -f /var/log/suricata/eve.json
+```
+
+Check Suricata service status:
+
+```bash
+sudo systemctl status suricata
+```
+
+## Security Note
+
+This configuration is an example for documentation. Verify the actual log path and agent configuration on your deployment before applying it.
