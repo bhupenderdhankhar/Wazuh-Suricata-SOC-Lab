@@ -21,7 +21,22 @@ flowchart TD
     F --> I[Active Response]
     I --> J[Firewall IP Blocking]
 ```
+## Project Screenshots
 
+### 1. Project Overview
+![Project Overview](screenshots/project-overview.png)
+
+### 2. SOC Monitoring Dashboard
+![SOC Monitoring](screenshots/soc-monitoring.png)
+
+### 3. Threat Detection
+![Threat Detection](screenshots/threat-detection.png)
+
+### 4. Threat Hunting
+![Threat Hunting](screenshots/threat-hunting.png)
+
+### 5. Wazuh Dashboard
+![Wazuh Dashboard](screenshots/wazuh-dashboard.png)
 ## Lab Environment
 
 | Component | Purpose |
