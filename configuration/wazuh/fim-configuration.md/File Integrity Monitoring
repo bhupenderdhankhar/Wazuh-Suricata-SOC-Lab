@@ -1,0 +1,34 @@
+# Wazuh File Integrity Monitoring
+
+## Objective
+
+Monitor important files and directories to identify unauthorized changes.
+
+## Technology
+
+- Wazuh Syscheck
+- Ubuntu Linux
+- Wazuh Dashboard
+
+## Monitoring Capabilities
+
+- File modification detection
+- File deletion detection
+- File checksum monitoring
+- File integrity event investigation
+
+## Testing Procedure
+
+1. Configure a monitored directory.
+2. Create a test file.
+3. Modify the test file.
+4. Delete the test file.
+5. Review generated alerts in Wazuh.
+
+## Expected Results
+
+Wazuh generates integrity events for monitored file changes and deletions.
+
+## Security Importance
+
+FIM helps security analysts identify unexpected changes that may indicate unauthorized activity or tampering.
