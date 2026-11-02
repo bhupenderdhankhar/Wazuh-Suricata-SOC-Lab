@@ -4,8 +4,69 @@
 A hands-on Security Operations Center (SOC) lab integrating **Wazuh SIEM** with **Suricata IDS** to monitor security events, detect suspicious network activity, investigate threats, and automate incident response.
 
 ## Project Overview
+# 🛡️ Wazuh SIEM + Suricata IDS
+### Automated Threat Detection & Incident Response
 
-This project demonstrates how SIEM and IDS technologies work together in a SOC environment. Suricata generates network security events, while Wazuh collects and analyzes security logs to support threat detection, monitoring, and response.
+[![Wazuh](https://img.shields.io/badge/SIEM-Wazuh-blue)](https://wazuh.com/)
+[![Suricata](https://img.shields.io/badge/IDS-Suricata-orange)](https://suricata.io/)
+[![Ubuntu](https://img.shields.io/badge/OS-Ubuntu-E95420)](https://ubuntu.com/)
+[![Kali Linux](https://img.shields.io/badge/Testing-Kali%20Linux-557C94)](https://www.kali.org/)
+[![Docker](https://img.shields.io/badge/Deployment-Docker-2496ED)](https://www.docker.com/)
+
+## 👨‍💻 Project Overview
+
+Developed a hands-on Security Operations Center (SOC) lab by integrating **Wazuh SIEM** with **Suricata IDS** to monitor security events, detect suspicious network activity, investigate threats, and automate incident response.
+
+The project demonstrates practical Blue Team operations, including security event monitoring, SSH brute-force detection, firewall-based IP blocking, File Integrity Monitoring, and vulnerability detection.
+
+## 🎯 Key Features
+
+| Security Capability | Implementation |
+|---|---|
+| SIEM Monitoring | Centralized monitoring using Wazuh |
+| Network Threat Detection | Suricata IDS integration |
+| SSH Brute-Force Detection | Wazuh rule-based detection |
+| Automated Incident Response | Firewall IP blocking using Active Response |
+| File Integrity Monitoring | Detection of file modifications and deletions |
+| Vulnerability Detection | Endpoint vulnerability monitoring |
+
+## 🧰 Technology Stack
+
+- **SIEM:** Wazuh
+- **IDS:** Suricata
+- **Operating Systems:** Ubuntu Linux, Kali Linux
+- **Containerization:** Docker
+- **Firewall:** iptables
+- **Virtualization:** VMware
+- **Log Format:** EVE JSON
+
+## 📸 Project Highlights
+
+Explore the screenshots and implementation evidence below.
+
+- SIEM monitoring dashboard
+- Network threat detection
+- SSH brute-force detection
+- Automated firewall response
+- File Integrity Monitoring
+
+## 📂 Project Documentation
+
+- [Implementation Guide](documentation/implementation-guide.md)
+- [SSH Brute-Force Detection](detection-rules/ssh-bruteforce.md)
+- [SOC Detection Use Cases](detection-rules/detection-use-cases.md)
+- [Testing & Validation](testing/test-cases.md)
+
+## 👨‍🎓 About the Developer
+
+**Bhupender Dhankhar**
+
+B.Tech – Computer Science & Engineering (Cyber Security)  
+Gurugram University
+
+Aspiring SOC Analyst | Interested in SIEM, Threat Detection, Network Security & Incident Response.
+
+[LinkedIn Profile](https://www.linkedin.com/in/bhupender-dhankhar-41299a351)
 
 ## Architecture
 
