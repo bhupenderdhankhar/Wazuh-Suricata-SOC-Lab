@@ -1,5 +1,4 @@
 # Wazuh SIEM Integration with Suricata IDS
-### Automated Threat Detection & Incident Response
 
 A hands-on Security Operations Center (SOC) lab integrating **Wazuh SIEM** with **Suricata IDS** to monitor security events, detect suspicious network activity, investigate threats, and automate incident response.
 
