@@ -85,7 +85,47 @@ flowchart TD
 - **Firewall:** iptables
 - **Virtualization:** VMware
 - **Log Format:** EVE JSON
+## Detection Logic & Incident Response Workflow
 
+### 1. SSH Brute-Force Detection
+
+- Monitored SSH authentication events on the Ubuntu endpoint.
+- Used Wazuh rule ID `5763` to detect repeated failed SSH login attempts.
+- Investigated suspicious source IP activity through security alerts.
+
+### 2. Automated IP Blocking
+
+- Configured Wazuh Active Response using the `firewall-drop` command.
+- Triggered automated response when the configured detection rule matched.
+- Configured a response timeout of 180 seconds.
+- Verified firewall-blocking activity through Wazuh alerts.
+
+### 3. Suricata Event Monitoring
+
+- Configured Suricata to generate network security events in EVE JSON format.
+- Collected Suricata logs through the Wazuh agent.
+- Monitored network-related security events in the Wazuh dashboard.
+
+### 4. File Integrity Monitoring
+
+- Enabled Wazuh FIM to monitor selected files and directories.
+- Detected file modifications and deletions.
+- Investigated generated integrity alerts.
+
+### 5. Vulnerability Detection
+
+- Enabled Wazuh Vulnerability Detection.
+- Collected endpoint software and operating system inventory.
+- Reviewed vulnerability findings through the Wazuh dashboard.
+
+## Incident Response Workflow
+
+1. Generate authorized test activity in the lab.
+2. Collect security events from the monitored endpoint.
+3. Analyze events using Wazuh detection rules.
+4. Generate security alerts for suspicious activity.
+5. Trigger Active Response for configured detection conditions.
+6. Review alerts and verify response actions in the dashboard.
 ## Project Outcomes
 
 - Established centralized security monitoring.
