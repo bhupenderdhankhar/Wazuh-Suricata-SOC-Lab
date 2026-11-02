@@ -1,0 +1,22 @@
+# SOC Detection Use Cases
+
+This document describes the security monitoring use cases implemented in the lab.
+
+| Use Case | Technology | Purpose |
+|---|---|---|
+| SSH Brute-Force Detection | Wazuh | Identify repeated failed SSH logins |
+| Automated IP Blocking | Wazuh Active Response | Block matching source IP |
+| Network Threat Monitoring | Suricata | Inspect network security events |
+| File Modification Detection | Wazuh FIM | Identify file changes |
+| File Deletion Detection | Wazuh FIM | Identify deleted files |
+| Vulnerability Monitoring | Wazuh | Identify known software vulnerabilities |
+
+## SOC Analyst Investigation Process
+
+1. Review the generated alert.
+2. Identify the source and destination.
+3. Check timestamps and event details.
+4. Determine severity and potential impact.
+5. Review related security events.
+6. Verify whether an automated response occurred.
+7. Document investigation findings.
